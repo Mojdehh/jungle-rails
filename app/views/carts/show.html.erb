@@ -5,7 +5,9 @@
   </header>
 
   <% if enhanced_cart.blank? %>
-    <div class="empty_cart">There is no item in your cart. Do you want to continue shopping? <%= link_to "Click Here.", root_path %></div>
+    <div class="alert alert-danger" role="alert">
+    There is no item in your cart. Do you want to continue shopping? <%= link_to "Please click here.", root_path %>
+    </div>
   <% else %>
 
     <div class="panel panel-default items">
