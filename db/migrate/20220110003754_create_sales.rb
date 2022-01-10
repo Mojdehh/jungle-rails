@@ -3,7 +3,7 @@ class CreateSales < ActiveRecord::Migration
     create_table :sales do |t|
       t.string :name
       t.integer :percent_off
-      t.sate :starts_on
+      t.date :starts_on
       t.date :ends_on
 
       t.timestamps null: false
