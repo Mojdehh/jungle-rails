@@ -60,6 +60,25 @@ RSpec.describe User, type: :model do
       expect(user2.errors.full_messages).to include "Email should be unique"
     end
 
+  end
+
+  describe '.authenticate_with_credentials' do
+    user = User.new(
+      name: "Mojdeh",
+      email: "mojdeh@email.com",
+      password: "test",
+      password_confirmation: "test"
+    )
+    
+    it 'should return the user if authentication passes' do
+      authenticate = User.authenticate_with_credentials(user.email, user.password)
+      expect(authenticate).to eq(user)
+    end
+
+    it 'should return nil if authentication does not pass' do
+      authenticate = User.authenticate_with_credentials(user.email, user.password)
+      expect(authenticate).to eq(nil)
+    end
 
   end
 
