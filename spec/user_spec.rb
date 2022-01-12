@@ -20,7 +20,12 @@ RSpec.describe User, type: :model do
       expect(user).not_to be_valid
       expect(user.errors.full_messages).to include "Name can't be blank"
     end
-    
+
+    it "should have an email to be valid user" do
+      user.email = nil
+      expect(user).not_to be_valid
+      expect(user.errors.full_messages).to include "Email can't be blank"
+    end
 
   end
 
