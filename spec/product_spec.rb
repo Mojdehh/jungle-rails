@@ -12,6 +12,7 @@ RSpec.describe Product, type: :model do
         category_id: @category.id
       )
       expect(@product).to be_valid
+      expect(@product.errors.full_messages).to be_empty
     end
   end
 
