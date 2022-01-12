@@ -34,6 +34,13 @@ RSpec.describe User, type: :model do
       expect(user).not_to be_valid
       expect(user.errors.full_messages).to include "Password is too short (minimum is 3 characters)"
     end
+
+
+    it "should have a password and password confirmation" do
+      user.password_confirmation= nil
+      expect(user).not_to be_valid
+      expect(user.errors.full_messages).to include "Password is too short (minimum is 3 characters)"
+    end
     
 
   end
