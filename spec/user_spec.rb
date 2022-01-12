@@ -14,6 +14,14 @@ RSpec.describe User, type: :model do
       expect(user).to be_valid
     end
 
+
+    it "should have a name to be valid user" do
+      user.name = nil
+      expect(user).not_to be_valid
+      expect(user.errors.full_messages).to include "Name can't be blank"
+    end
+    
+
   end
 
 end
