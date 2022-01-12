@@ -21,11 +21,20 @@ RSpec.describe User, type: :model do
       expect(user.errors.full_messages).to include "Name can't be blank"
     end
 
+
     it "should have an email to be valid user" do
       user.email = nil
       expect(user).not_to be_valid
       expect(user.errors.full_messages).to include "Email can't be blank"
     end
+
+
+    it "should have a password with a min length of 3 to be valid user" do
+      user.password = "te"
+      expect(user).not_to be_valid
+      expect(user.errors.full_messages).to include "Password is too short (minimum is 3 characters)"
+    end
+    
 
   end
 
