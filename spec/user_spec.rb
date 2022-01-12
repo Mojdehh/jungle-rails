@@ -49,6 +49,18 @@ RSpec.describe User, type: :model do
       expect(user.errors.full_messages).to include "Password confirmation doesn't match Password"
     end
 
+    it "should not have two users with same email" do
+      user2 = User.new(
+        name: "user2",
+        email: "mojdeh@email.COM",
+        password: "test",
+        password_confirmation: "test"
+      )
+      expect(user2).not_to be_valid
+      expect(user2.errors.full_messages).to include "Email should be unique"
+    end
+
+
   end
 
 end
