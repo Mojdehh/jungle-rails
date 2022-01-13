@@ -24,8 +24,8 @@ The purpose of this project was to become familiar with Ruby and Rails framework
 
 ## Testing
 - The app was tested with:
- > RSpec,
- > Capybara and Poltergeist
+  > RSpec,
+  > Capybara and Poltergeist
 
  ## Final Product
 
