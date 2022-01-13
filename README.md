@@ -5,30 +5,31 @@ A mini e-commerce application built with Rails 4.2.
 The purpose of this project was to become familiar with Ruby and Rails framework, learn how to navigate an existing code base, and use its style and approach to implement new features in unfamiliar territory. 
 
 
-# Features Added
+## Features Added
 - Sold out badge 
 - Admin access
-  > Admins can list and create new categories
-  > Admins can add new products using the new category
-  > Admins' dashboard shows total categories and products with an appropriate link
+  . Admins can list and create new categories
+  . Admins can add new products using the new category
+  . Admins' dashboard shows total categories and products with an appropriate link
 - User authentication
-  > Users can login/signup using bcrypt with Rails
+  . Users can login/signup using bcrypt with Rails
 - Order details page
-  > Upon confirming an order, a descriptive page of the order is shown to users 
+  . Upon confirming an order, a descriptive page of the order is shown to users 
 
 
-# Bugs Fixed
+## Bugs Fixed
 - When the cart is empty, display a friendly message to continue shopping with a link to home page
 - Add HTTP basic Auth to access admin functionality
 
 
-# Testing
+## Testing
 - The app was tested with:
- > RSpec
- > Capybara and Poltergeist
+ . RSpec
+ . Capybara and Poltergeist
 
  ## Final Product
 
+ !["App"](https://github.com/Mojdehh/jungle-rails/blob/master/docs/Jungle.png)
 
 
 ## Additional Steps for Apple M1 Machines
