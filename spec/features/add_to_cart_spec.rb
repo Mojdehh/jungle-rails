@@ -1,5 +1,6 @@
 require 'rails_helper'
 
+RSpec.feature "Visitors can add items to cart", type: :feature, js: true do
 
   before :each do
     @category = Category.create! name: 'Apparel'
@@ -15,4 +16,13 @@ require 'rails_helper'
     end
   end
 
+  scenario "Add item to cart and number of cart changes" do
+    visit root_path
+
+    click_button('Add', match: :first)
+    expect(page).to have_text('My Cart (1)')
+    save_screenshot 'itemAdded.png'
+
+    # puts page.html
+  end
 end
